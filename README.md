@@ -8,7 +8,7 @@ I'm following this tutorial: [Learn Docker in 7 Easy Steps - Fireship](https://w
 
 ## What is Docker?
 
-A way to package software so it can run in any software.
+> A way to package software so it can run in any hardware.
 
 ### Dockerfile
 
