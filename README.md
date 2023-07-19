@@ -24,9 +24,7 @@ A running process. For this example we have a Node application.
 
 We need to have a server that is running the same version of Node and that has also installed this dependencies.
 
-The whole point of Docker is to solve problems by reproducing environments so the applications can run without breaking.
-
-Then, any developer can use this image to rebuild the environment. 
+The whole point of Docker is to solve problems by reproducing environments so the applications can run without breaking. Then, any developer can use this image to rebuild the environment. 
 
 Images can be uploaded to the cloud in both private or public registries.
 
@@ -58,7 +56,11 @@ CMD [ "npm", "start" ]
 ```
 
 ### FROM
-We could start from scratch using "FROM Ubuntu". But for this case we would need to install Nodejs manually. 
+We could start from scratch using 
+```
+FROM Ubuntu 
+```
+But for this case we would need to install Nodejs manually.
 
 As we have an officially supported nodejs image we are going to use it.
 
@@ -83,7 +85,7 @@ Used to set an environment variable to run our code. When we have a running cont
 ```
 const port = process.env.PORT || 8080;
 ```
-This way we can access the nodejs express app publicly
+This way we can access the nodejs express app publicly.
 
 ### CMD
 There can only be one of these per Dockerfile! And this tells the container how to run the actual application. Which it does by starting a process to serve the express app. 
@@ -155,7 +157,9 @@ docker exec
 ```
 This way you will be in the root of the file system of that container so you can use any Linux commands.
 
-You should always think about writing simple and maintainable micro services for each container. The best way to to this is to remember that **a Container should only run 1 Process at a time.**
+You should always think about writing simple and maintainable micro services for each container. The best way to to this is to remember that 
+
+### A Container should only run 1 Process at a time!
 
 So if your app need **multiple processes** you should use **multiple containers!**
 
