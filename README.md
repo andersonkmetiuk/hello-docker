@@ -1,7 +1,5 @@
 # Hello Docker
 
-## First Docker project
-
 <img src="assets/docker-logo.png" alt="docker-logo" style="padding: 10px" />
 
 I'm following this tutorial: [Learn Docker in 7 Easy Steps - Fireship](https://www.youtube.com/watch?v=gAkwW2tuIqE). More details in this [site](https://fireship.io/lessons/docker-basics-tutorial-nodejs/).
